@@ -24,7 +24,8 @@ void Interface_Teller(Teller &pObject)
     {
         Sleep(500); // delay 0.5s xuất ra màn hình
 
-        cout << "ID: " << endl;
+        cout << "Welcome Teller: " << pObject.getName() << endl;
+        cout << "" << endl;
     }
 }
 
@@ -35,7 +36,7 @@ Customer *Search_Customer(vector<Customer> &vector, string name, int PIN)
 
     // so sánh name và PIN của đối tượng với đối tượng có trong vector dữ liệu khách hàng
     for(Customer &pObject : vector) {
-        if(pObject.getName() == name && pObject.getPIN() == PIN) return &pObject;
+        if(pObject.getName() == name && pObject.getPIN() == PIN) return &pObject; // trả về địa chỉ đối tượng
     }
     return NULL;
 }
@@ -47,7 +48,7 @@ Teller *Search_Teller(vector<Teller> &vector, string name, int PIN)
 
     // so sánh name và PIN của đối tượng với đối tượng có trong vector dữ liệu Teller
     for(Teller &pObject : vector) {
-        if(pObject.getName() == name && pObject.getPIN() == PIN) return &pObject;
+        if(pObject.getName() == name && pObject.getPIN() == PIN) return &pObject; // trả về địa chỉ đối tượng
     }
     return NULL;
 }
